@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Myschedule</title>
+    <title>スケジュール管理アプリ</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,11 @@
   </head>
 
   <body>
+    <header>
+       <h1>Ruby on Rails</h1>
+       <h1>スケジュール管理アプリ</h1>
+    </header>
     <%= yield %>
+    <h3>本日の日付:<%= Time.now.strftime("%Y/%m/%d")%></h3>
   </body>
 </html>
