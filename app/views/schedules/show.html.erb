@@ -1,0 +1,30 @@
+<h3>予定詳細ページ</h3>
+
+<table>
+  <tr>
+    <th>タイトル</th>
+    <td><%= @schedule.title %></td>
+  </tr>
+  <tr>
+    <th>開始日</th>
+    <td><%= @schedule.start.strftime("%Y/%m/%d %H:%M") %></td>
+  </tr>
+  <tr>
+    <th>終了日</th>
+    <td><%= @schedule.finish.strftime("%Y/%m/%d %H:%M") %></td>
+  </tr>
+  <tr>
+    <th>終日</th>
+    <td><% if @schedule.all_day == true %>◯<% else @schedule.all_day == false %><% end %></td>
+  </tr>
+  <tr>
+    <th>スケジュールメモ</th>
+    <td><%= @schedule.memo %></td>
+  </tr>
+</table>
+
+<div>
+  <ul>
+    <li><%= link_to "予定一覧ページに戻る", :schedules %></li>
+  </ul>
+</div>
