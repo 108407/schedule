@@ -1,5 +1,9 @@
 <h3>予定編集ページ</h3>
 
+<% if flash[:notice] %>
+   <p class="notice"><%= flash[:notice] %></p>
+<% end %>
+
 <%= form_with model: @schedule do |f| %>
   <table>
     <tr>

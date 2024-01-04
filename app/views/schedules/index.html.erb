@@ -1,6 +1,5 @@
 <h3>予定一覧ページ</h3>
 
-
 <% if flash[:notice] %>
    <p class="notice"><%= flash[:notice] %></p>
 <% end %>
@@ -38,7 +37,7 @@
          <%= link_to "編集", [:edit, schedule] %>
         </td>
         <td>
-         <%= link_to "削除", schedule, method: :delete, data: { confirm: "本当に削除しますか？" } %>
+        <%= link_to "削除", schedule, method: :delete, data: { confirm: "本当に削除しますか？" } %>
         </td>
       </tr>
     <% end %>
